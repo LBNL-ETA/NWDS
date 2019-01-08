@@ -1,0 +1,74 @@
+Metadata-Version: 1.2
+Name: NOAA-Weather-Data-Scraper
+Version: 0.1
+Summary: BETA TEST WEATHER DATA TOOL NOAA
+Home-page: UNKNOWN
+Author: Benoit Chabot
+Author-email: benoit.chabot17@gmail.com
+Maintainer: Laboratoire national Lawrence-Berkeley
+Maintainer-email: 
+License: UNKNOWN
+Description: 
+        ![Logo](./logo_1.png)
+        # **NOAA WEATHER DATA SCRAPER**
+        _________________________________________________
+        
+        ### 1. Presentation
+        
+        The NOAA Weather Data Scraper (NWDS) is a tool which enable to collect the past weather data from [National Oceanic and Atmospheric Administration (NOAA)](https://www.noaa.gov/). The data is provided by the [National Centers for Environmental Information](https://www.ncei.noaa.gov)'s FTP server. The server contains a large amout of data provided by 5109 weather station through all over the US since 1901.
+        The tool offers two acess modes with two operation modes :
+        * **Acces mode 1 :** Graphic User Interface
+         * **Operation mode 1.1 :** Collect weather data for a specific zip code and time period
+         * **Operation mode 1.2 :** Collect weather data for one or more zip code and time period referenced in specific input file(s) contained in a folder (Special [RMV2.0 tool](https://lbnl-eta.github.io/RMV2.0/) format)Â¹
+         
+         
+        * **Acces mode 2 :** Command lines or called through another algorithm
+         * **Operation mode 2.1 :** Collect weather data for a specific zip code and time period
+         * **Operation mode 2.2 :** Collect weather data for one or more zip code and time period referenced in specific input file(s) contained in a folder (Special [RMV2.0 tool](https://lbnl-eta.github.io/RMV2.0/) format)Â¹
+        
+        For each access modes the operation modes provide respectively similar results but it's used in a different way. The operation mode 1 provides a CSV file which contains the temperature data with one hour timestep for the specified time period and location. The operation mode 2 scan the input files in the specified folder to collect the time period and zip code. Then, for each file the temperature is incorporate and patterned for the [RMV2.0 tool](https://lbnl-eta.github.io/RMV2.0/)
+        
+        In order to get the best temperature data quality the process focus two goals. Collect the data from the nearest weather station to the specified zip code and obtains the best data density quality. A function calculates the lowest great-circle distance (2D) between the weather stations and the zip code location. Then the data collected is verified. If the annual density data is lower than 85% the process delete this weather station in the instance year and select the next nearest weather station. Overall, the algorithm enable to get the nearest weather data and guarantee a data quality.
+        
+        ___________________________________________________________
+        Â¹ Both operation modes 2 are specially developped for the [RMV2.0 tool](https://lbnl-eta.github.io/RMV2.0/). They require a specific input format file (c.f. 3. User Guide) and generate an adapted format file to be directly integrated in the [RMV2.0 tool](https://lbnl-eta.github.io/RMV2.0/)
+        
+        
+        ### 2. Installation guide
+        
+        - Python version required : 3.6 or more recent
+        > https://www.python.org/downloads/
+        - Library/modules required :
+            | Library/module | Version (or more recent) |
+            |---------|-------------------------:|
+            |numpy|1.14.3|
+            |pandas|0.23.0|
+            |matplotlib|2.2.2|
+            |datetime|2.7.3|
+            |time|2.7.3|
+            |requests|2.18.4|
+            |platform|1.0.8|
+            |geocoder|1.38.1|
+            |argparse|1.1|
+            |pytz|2018.4|
+            |os||
+            |math||
+            |tkinter||
+            |threading||
+        
+        - Install NWDS modules :
+            - Open a Terminal
+            - Execute the command :
+            > pip install git+https://github.com/XXXXXX
+        
+        
+        
+        ### 3. User guide
+        **Graphic User Interface :** (Acces mode 1)
+        1. Launch the GUI on Mac :
+         1. Open a Terminal : <br />
+        > Finder > Applications > Utilities > Terminal
+        
+        
+Keywords: python LBNL weather data NOAA
+Platform: ALL
