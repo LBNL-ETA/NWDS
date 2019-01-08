@@ -5,7 +5,7 @@ _________________________________________________
 
 ### 1. Introduction
 
-The NOAA Weather Data Scraper (NWDS) is a for collecting historical outside air temperature  from [National Oceanic and Atmospheric Administration (NOAA)](https://www.noaa.gov/). The data is gathered from the [National Centers for Environmental Information](https://www.ncei.noaa.gov)'s FTP server, which contains past weather data for 5109 weather stations across the USA.
+The NOAA Weather Data Scraper (NWDS) is a tool for collecting historical outside air temperature data from [National Oceanic and Atmospheric Administration (NOAA)](https://www.noaa.gov/). The data is gathered from the [National Centers for Environmental Information](https://www.ncei.noaa.gov)'s FTP server, which contains past weather data for 5109 weather stations across the USA.
 
 The tool can be used either through Graphical User Interface or Command Lines and there is two options for data gathering:
 
@@ -48,7 +48,7 @@ The tool can be used either through Graphical User Interface or Command Lines an
 - Install NWDS modules :
     - Open a Terminal
     - Execute the commands :
-    > git clone https://github.com/XXXXXX.git <br />
+    > git clone https://github.com/LBNL-ETA/NWDS.git <br />
     > cd NWDS <br />
     > python setup.py install <br />
 
